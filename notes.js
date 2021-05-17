@@ -1,4 +1,5 @@
 show()
+mobile()
 function add(){
     let addnote=document.getElementById('inputnote');
     // console.log(addnote.value)
@@ -51,9 +52,7 @@ function show(){
         <div class="card" id='${i}'>
         <h2>note ${i+1} <br></h2> 
               
-        <div>
-            <p>${notesarray[i]} <br></p>
-        </div>
+            <p id='p${i}'>${notesarray[i]} <br></p>
         <button id="${i}" onclick="del(this.id)">Delete</button>
     </div>`
 
@@ -74,4 +73,38 @@ function del(id){
     localStorage.setItem('note',JSON.stringify(notesarray))
     show()
 
+}
+function search(){
+    let searchtxt=document.getElementById('searchbar');
+    let notes=document.getElementById('addednotes');
+    console.log(searchtxt.value)
+    for(let i=0;i<notes.childElementCount;i++){
+        let para=document.getElementById(`p${i}`)
+        if(para!=null){
+        if(para.innerText.includes(searchtxt.value)){
+            let card=para.parentElement;
+            card.style.display='initial'
+        }
+        else{
+            let card=para.parentElement;
+            card.style.display='none'
+        }}
+    }
+
+
+}
+
+function mobile(){
+        // console.log('avgcdv')
+
+    let width=window.innerWidth;
+    // console.log(width)
+    if(width<=650){
+        let tobedeleted1=document.getElementById('navcontent3')
+        let tobedeleted2=document.getElementById('navcontent4')
+        tobedeleted1.style.display='none'
+        tobedeleted2.style.display='none'
+        
+        // location.reload()
+    }
 }

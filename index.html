@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <title>Magic Notes</title>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="container" id="navbar">
+            <div class="navcontent" id="navcontent1">Magic Notes</div>
+            <div class="navcontent" id="navcontent2">Home</div>
+            <div class="navcontent" id="navcontent3">
+                <input type="search" name="search" id="searchbar" placeholder="search in your note" onchange="search()">
+            </div>
+            <div class="navcontent" id="navcontent4">
+                <button id="serchbtn" onclick="search()">Search</button>
+            </div>
+        </div>
+    </nav>
+    <div id="search">
+
+    </div>
+    <h1 id="primaryheading">Welcome to Magic Notes</h1>
+    <div class="container" id="addnote">
+        <h2 id="secondaryheading">Add a Note</h2>
+        <textarea name="note" id="inputnote" cols="80%" rows="20%" style="max-width:80%"></textarea>
+        <br>
+        <button id="addnotebtn" onclick="add()">Add Note</button>
+    </div>
+    <div id="mynotes">
+        <h1 id="">Your Notes</h1>
+        
+        <div id="addednotes">
+            
+    </div>
+    
+</body>
+<script src="notes.js"></script>
+
+</html>

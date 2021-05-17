@@ -1,0 +1,126 @@
+body{
+    font-family: 'Bree Serif', serif;
+}
+nav::before{
+    
+    content: "";
+    height: 13%;
+    width: 101%;
+    background-color: #000;
+    display: block;
+    position: absolute;
+    opacity: 0.7;
+    margin-left: -1%;
+    margin-right: 0%;
+    margin-top: -1%;
+    z-index: -1;
+
+}
+#navbar{
+    display: flex;
+    /* flex-direction: column; */
+    color: white;
+    padding-right: 3%;
+    /* justify-content: center; */
+    /* align-items: center */
+    /* align-content: center; */
+}
+.navcontent{
+    margin-right: 3%;
+    margin-left: 1%;
+    margin-top: 1.5%;
+    font-size: 140%;
+}
+#navcontent4{
+    /* margin-left: -2%; */
+    position: absolute;
+    margin-left: 93%;
+}
+#navcontent3{
+    /* margin-left: -2%; */
+    position: absolute;
+    margin-left: 80%;
+    width: 16%;
+}
+button{
+    border-radius: .5em;
+    height: 2rem;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(32, 177, 32);
+    color: white;
+    padding: 0rem 1rem;
+    font-weight: bold;
+}
+input{
+    height: 2rem;
+    border-radius: .5em;
+    text-align: center;
+}
+#addnote{
+    border: 1px solid black;
+    width: 70%;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 1rem;
+    /* margin-bottom: 2%; */
+}
+#primaryheading{
+    margin-left: 30%;
+    margin-top: 6%;
+}
+#secondaryheading{
+    margin-left: 5%;
+    margin-top: 3%;
+}
+#inputnote{
+    margin-left: 5%;
+    margin-top: 1%;
+    /* width: 30%;
+    height: 130%; */
+    border-radius: 1rem;
+}
+#addnotebtn{
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+#mynotes{
+    margin-left: 15%;
+    margin-top: 3rem;
+
+}
+#inputnode{
+    outline: none;
+}
+#addednotes{
+    display: flex;
+    /* margin: 3rem; */
+    /* padding: 4rem; */
+    flex-wrap: wrap;
+}
+p{
+    margin-right: 1rem;
+    padding: .5rem;
+    
+    /* display: ruby-text-container; */
+}
+#delete{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+#search{
+    /* border: 1px solid black; */
+    height:300px;
+    width: 20%;
+    position: absolute;
+    margin-left: 75%;
+    margin-top: 5%;
+}
+.card{
+    margin: 2rem;
+    width: 25%;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 1rem;
+}

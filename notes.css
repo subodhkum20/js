@@ -4,23 +4,26 @@ body{
 nav::before{
     
     content: "";
-    height: 13%;
+    height: 80px;
     width: 100%;
     background-color: #000;
     display: block;
     position: absolute;
-    opacity: 0.7;
-    margin-left: -1%;
-    margin-right: 0%;
-    margin-top: -1%;
-    z-index: -1;
-
+    opacity: 1;
+    /* margin-left: -1%; */
+    /* margin-right: 0%; */
+    /* margin-top: -1%; */
+    z-index: 2;
+    position: fixed;
+    
 }
 #navbar{
     display: flex;
     /* flex-direction: column; */
     color: white;
     padding-right: 3%;
+    position: fixed;
+    z-index: 3;
     /* justify-content: center; */
     /* align-items: center */
     /* align-content: center; */
@@ -28,19 +31,11 @@ nav::before{
 .navcontent{
     margin-right: 3%;
     margin-left: 1%;
-    margin-top: 1.5%;
+    /* margin-top: 1.5%; */
     font-size: 140%;
-}
-#navcontent4{
-    /* margin-left: -2%; */
-    position: absolute;
-    margin-left: 92%;
-}
-#navcontent3{
-    /* margin-left: -2%; */
-    position: absolute;
-    margin-left: 80%;
-    width: 16%;
+    position: fixed;
+    /* padding: 550px; */
+    z-index: 3;
 }
 button{
     border-radius: .5em;
@@ -68,7 +63,8 @@ input{
 }
 #primaryheading{
     margin-left: 30%;
-    margin-top: 6%;
+    margin-top: 100px;
+
 }
 #secondaryheading{
     margin-left: 5%;
@@ -89,7 +85,7 @@ input{
 #mynotes{
     margin-left: 15%;
     margin-top: 3rem;
-
+    
 }
 #inputnode{
     outline: none;
@@ -136,4 +132,37 @@ p{
 #searchbar{
     position: absolute;
     right: 100px;
+}
+nav{
+    /* margin-top: -70px; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* left: 0px; */
+}
+#navcontent4{
+    /* margin-left: -2%; */
+    /* position: absolute; */
+    /* margin-left: 92%; */
+    right: 20px;
+    top: 25px;
+}
+#navcontent3{
+    /* margin-left: -2%; */
+    /* position: absolute; */
+    /* margin-left: 80%; */
+    /* width: 16%; */
+position: fixed;
+    right: 0px;
+    top: 25px;
+}
+#navcontent2{
+    position: fixed;
+    left: 180px;
+    top: 25px;
+}
+#navcontent1{
+    position: fixed;
+    left: 30px;
+    top: 25px;    
 }

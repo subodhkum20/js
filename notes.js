@@ -33,6 +33,15 @@ function show(){
     </div>
         `
     }
+    if (arr.length!=0){
+        emptynote=document.getElementById('mynotes')
+        emptynote.innerHTML=`
+        <h1 id="">Your Notes</h1>
+
+        <div id="addednotes">
+            
+    </div>`
+    }
     let notesarray=Array.from(JSON.parse(note))
     addednotes.innerHTML=""
     for(let i=0;i<notesarray.length;i++){

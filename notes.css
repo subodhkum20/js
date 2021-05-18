@@ -1,5 +1,6 @@
 body{
     font-family: 'Bree Serif', serif;
+    min-height: 150vh;
 }
 nav::before{
     
@@ -7,6 +8,7 @@ nav::before{
     height: 80px;
     width: 100%;
     background-color: #000;
+    /* background-color:rgb(216, 231, 229); */
     display: block;
     position: absolute;
     opacity: 1;

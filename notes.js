@@ -1,5 +1,5 @@
 let card = document.getElementsByClassName('card');
-console.log(card)
+// console.log(card)
 for (let i = 0; i < card.length; i++) {
     card[i].addEventListener('hover', Edit)
 }
@@ -85,7 +85,7 @@ function del(id) {
 function search() {
     let searchtxt = document.getElementById('searchbar');
     let notes = document.getElementById('addednotes');
-    console.log(searchtxt.value)
+    // console.log(searchtxt.value)
     for (let i = 0; i < notes.childElementCount; i++) {
         let para = document.getElementById(`p${i}`)
         if (para != null) {
@@ -123,51 +123,53 @@ function Edit(id) {
     let idastext = id.replace('e', '')
    
 
-    let del=document.getElementById(id).previousElementSibling;
+    let delet=document.getElementById(id).previousElementSibling;
     
     
     // document.getElementById(id).parentElement.contentEditable = 'true'
-    del.previousElementSibling.contentEditable = 'true'
+    delet.previousElementSibling.contentEditable = 'true'
     document.getElementById(`h${idastext}`).innerText = 'Edit note'
     let savebtn = document.createElement('button');
     savebtn.innerText = 'save';
+    
     savebtn.id = `e${idastext}`
-    // savebtn.addEventListener('click', del(idastext))
     savebtn.addEventListener('click', addedit)
+    // savebtn.click(del(idastext),false)
     savebtn.addEventListener('click', function(){
-        tobedeleted = document.getElementById(id);
+        tobedeleted = document.getElementById(idastext);
         let note = localStorage.getItem('note')
         let notesarray = JSON.parse(note)
         // console.log(notesarray)
         for (let i = 0; i < notesarray.length; i++) {
-            if (i == id) {
+            if (i-1 == idastext) {
                 notesarray.splice(i, 1)
+                console.log(i)
             }
-    
+            
         }
         localStorage.setItem('note', JSON.stringify(notesarray))
         show()
     })
     document.getElementById(`e${idastext}`).replaceWith(savebtn)
     let edited = document.getElementById(`p${idastext}`)
-    console.log(edited.innerText)
+    // console.log(edited.innerText)
     document.getElementById(id).parentElement.style.backgroundColor = 'rgb(216, 231, 229)';
     ebutton = document.getElementById(id);
     // let addnote = document.getElementById('inputnote');
     //     addnote.innerText = edited.innerText
-
-    del.previousElementSibling.addEventListener('input', function () {
-        console.log(edited.innerText)
+    
+    delet.previousElementSibling.addEventListener('input', function () {
+        // console.log(edited.innerText)
         // Edit(id);
         addnote = document.getElementById('inputnote');
-        addnote.innerText = del.previousElementSibling.innerText
+        addnote.innerText = delet.previousElementSibling.innerText
         // location.reload()
     })
-    console.log(idastext)
+    // console.log(idastext)
     // ebutton.r
 
 }
-function addedit() {
+function addedit(id) {
     let addnote = document.getElementById('inputnote');
     // console.log(addnote.value)
     let existingnote = localStorage.getItem('note');
@@ -182,9 +184,7 @@ function addedit() {
     }
     notesasstring.unshift(addnote.value);
     localStorage.setItem('note', JSON.stringify(notesasstring))
-    // console.log(notesasstring)
     addnote.value = "";
     location.reload()
     show();
-    // del(idastext)
 }

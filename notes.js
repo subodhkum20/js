@@ -124,7 +124,8 @@ function Edit(id) {
    
 
     let delet=document.getElementById(id).previousElementSibling;
-    
+     addnote = document.getElementById('inputnote');
+    addnote.innerText = delet.previousElementSibling.innerText
     
     // document.getElementById(id).parentElement.contentEditable = 'true'
     delet.previousElementSibling.contentEditable = 'true'

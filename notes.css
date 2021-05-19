@@ -168,3 +168,6 @@ position: fixed;
     left: 30px;
     top: 25px;    
 }
+p{
+    word-wrap: break-word;
+}

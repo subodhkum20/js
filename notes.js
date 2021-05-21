@@ -36,20 +36,20 @@ function show() {
     let addtitle = document.getElementById('inputtitle');
     // console.log(addtitle.value)
     // console.log(addnote.value)
-    let existingnote = localStorage.getItem('note');
-    let existingtitle = localStorage.getItem('notetitle');
-    if (existingnote == null) {
+    let note = localStorage.getItem('note');
+    // let existingtitle = localStorage.getItem('notetitle');
+    if (note == null) {
         notesasstring = [];
         titleasstring = [];
     }
     addnote = document.getElementById('addnote');
-    let note = localStorage.getItem('note')
+    // let note = localStorage.getItem('note')
     let title = localStorage.getItem('notetitle')
     // console.log(title)
     let arr = JSON.parse(note);
     let titlearr = JSON.parse(title);
     // console.log(arr)
-    if (arr.length== 0||titlearr.length== 0) {
+    if (note== null||title==null) {
         emptynote = document.getElementById('mynotes')
         emptynote.innerHTML = `
         <h1 id="">Your Notes</h1>
@@ -67,7 +67,6 @@ function show() {
         <div id="addednotes">
             
     </div>`
-    }
     let notesarray = Array.from(JSON.parse(note))
     let titlearray = Array.from(JSON.parse(title))
     addednotes.innerHTML = ""
@@ -83,6 +82,7 @@ function show() {
         <button id="e${i}" onclick="Edit(this.id)">Edit</button>
     </div>`
 
+    }
     }
 
 }

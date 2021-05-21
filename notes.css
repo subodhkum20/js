@@ -81,6 +81,7 @@ input{
     outline: none;
     font-size: 20px;
     padding: 10px;
+    font-family: 'Bree Serif', serif;
 }
 #inputtitle{
     margin-left: 5%;
@@ -91,6 +92,7 @@ input{
     outline: none;
     font-size: 20px;
     padding: 10px;
+    font-family: 'Bree Serif', serif;
 }
 #addnotebtn{
     margin-left: 5%;

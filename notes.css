@@ -78,6 +78,19 @@ input{
     /* width: 30%;
     height: 130%; */
     border-radius: 1rem;
+    outline: none;
+    font-size: 20px;
+    padding: 10px;
+}
+#inputtitle{
+    margin-left: 5%;
+    margin-top: 1%;
+    /* width: 30%;
+    height: 130%; */
+    border-radius: 1rem;
+    outline: none;
+    font-size: 20px;
+    padding: 10px;
 }
 #addnotebtn{
     margin-left: 5%;
@@ -89,9 +102,7 @@ input{
     margin-top: 3rem;
     
 }
-#inputnode{
-    outline: none;
-}
+
 #addednotes{
     display: flex;
     /* margin: 3rem; */
@@ -167,4 +178,7 @@ position: fixed;
     position: fixed;
     left: 30px;
     top: 25px;    
+}
+p{
+    word-wrap: break-word;
 }
